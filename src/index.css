@@ -4,6 +4,10 @@ Variables
 ===============
 */
 
+/* font */
+
+@import url('https://fonts.googleapis.com/css2?family=Fira+Sans+Extra+Condensed:ital,wght@1,200&display=swap');
+
 :root {
   /* dark shades of primary color*/
   --clr-primary-1: hsl(205, 86%, 17%);
@@ -58,8 +62,8 @@ Global Styles
   box-sizing: border-box;
 }
 body {
-  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen,
-    Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+  font-family:'Fira Sans Extra Condensed', sans-serif; 
+    
   background:black;
   color: var( --clr-primary-9);
   line-height: 1.5;
