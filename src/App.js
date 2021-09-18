@@ -1,11 +1,15 @@
 import React, { useState, useEffect } from "react";
 import { FaSearch } from "react-icons/fa";
 import Photo from "./Photo";
+import loadingsvg from './loading.svg';
 // bdYMjNW7irDyiU1b-JSWAmKbO-Tc95LPfalAO_9QG2I
 // const clientID = `?client_id=${process.env.REACT_APP_ACCESS_KEY}`
 const clientID = `?client_id=bdYMjNW7irDyiU1b-JSWAmKbO-Tc95LPfalAO_9QG2I`;
 const mainUrl = `https://api.unsplash.com/photos/`;
 const searchUrl = `https://api.unsplash.com/search/photos/`;
+
+// import svg
+
 
 function App() {
   const [loading, setLoading] = useState(false);
@@ -13,6 +17,8 @@ function App() {
   const [page, setPage] = useState(1);
   const [query, setQuery] = useState("");
   const [search, setSearch] = useState(false);
+
+
   /// fetchAPI images and useEffect
   useEffect(() => {
     fetchImages();
@@ -96,7 +102,7 @@ function App() {
             /* destructured */
           })}
         </div>
-        {loading && <h2 className="loading">Loading...</h2>}
+        {loading &&<img src={loadingsvg} className='svg' alt={'loading'} />}
       </section>
       <footer className='loading'> By N Venkatesh Kamath</footer>
     </main>
